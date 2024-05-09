@@ -4,7 +4,7 @@ public class Motorista {
 
     private String nome;
     private Long chavePix;
-    private Long cpf;
+    private String cpf;
 
     public String getNome() {
         return nome;
@@ -22,11 +22,11 @@ public class Motorista {
         this.chavePix = chavePix;
     }
 
-    public Long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 }

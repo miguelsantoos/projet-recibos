@@ -9,6 +9,6 @@ public class MotoristaService {
     }
 
     public void gerarRecibo(Motorista motorista) {
-        System.out.println("Gerando recibo no motrista " + motorista.getNome());
+        System.out.println("Gerando recibo no nome motrista " + motorista.getNome() + " de cpf " + motorista.getCpf() + " e chave pix " + motorista.getChavePix());
     }
 }
