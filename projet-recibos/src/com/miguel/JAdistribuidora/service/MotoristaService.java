@@ -14,7 +14,9 @@ public class MotoristaService {
     }
 
     public void cadastrar(String nome, String chavePix, String cpf) {
-        listMotoristas.add(new Motorista(nome,chavePix,cpf));
+
+        if (!listMotoristas.contains(nome))
+            listMotoristas.add(new Motorista(nome,chavePix,cpf));
     }
 
     public void motoristasCadastrados() {
@@ -52,20 +54,16 @@ public class MotoristaService {
          *
          */
 
-
-
         List<Motorista> listRecibos = new ArrayList<>();
 
         for (Motorista motorista : listMotoristas){
             if (motorista.getNome().equalsIgnoreCase(nome)){
                 listRecibos.add(motorista);
             }
-            System.out.println("Eu " + listRecibos.get(0).getNome() + " de cpf " + listRecibos.get(0).getCpf() + " Recebi um valor de R$ 500,00, " +
-                    "que sera depositado nessa chave pix " + listRecibos.get(0).getChavePix());
+            System.out.println("Eu " + listRecibos.get(0).getNome() + " de cpf " + listRecibos.get(0).getCpf() +
+                    " Recebi um valor de que sera depositado nessa chave pix " + listRecibos.get(0).getChavePix());
         }
-
     }
-
 }
 
 
